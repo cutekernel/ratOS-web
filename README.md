@@ -7,28 +7,28 @@ Kudos to XSSRat for putting this application together.
 
 ## Understanding the Web Application and its funtionalities:
 
-This step is often overlooked because of its simplicity of many biaises and assumptions one may have about a particular application. However, I believe that it is fundamental in order to properly test the security of any system, application, etc.
+This step is often overlooked because of its simplicity or many biaises and assumptions one may have about a particular application. However, I believe that this step is crucial in order to properly test the security of any system, application, etc.
 
-When you first access the website you are presented with a cli.
+When you first access the web application, you will be presented with a cli.
 ![image](https://user-images.githubusercontent.com/74272629/235278237-4a445c49-5bd7-4465-84cc-f57fb7d3e23e.png)
 
 Use the help command to see which commands this terminal supports.
 ![image](https://user-images.githubusercontent.com/74272629/235278248-9d6ff8be-5edc-4487-b2c2-37f5d827b7a5.png)
 
-It is common practice to know which user you are logged in as. You can do so by unning the whoami command. 
+It is common practice to check which user you are logged in as when interacting with a terminal. You can do so by unning the whoami command. 
 ![image](https://user-images.githubusercontent.com/74272629/235278244-cc40113f-f669-4329-bc2c-a505134a0b73.png)
 
 Subsequent to this discovery, I performed further testing by attempting to execute the remaining commands to gain a comprehensive understanding of their respective functionalities. Through this testing, I observed that certain commands did not execute as expected, while others did.
 
-It is worth noting that in the case of the history command, I found to be operational and revealed sensitive information, namely the username and password of the root user.
+It is worth noting that in the case of the history command, I found that command to be operational as it revealed sensitive information, namely the username and password of the root user.
 ![image](https://user-images.githubusercontent.com/74272629/235278403-b0a5c06b-bb04-4b28-848a-66dcd89d16e2.png)
 
-I used these credentials to authenticate as root. Once you do, you will be presented with a "Login Successful". In addition to an error message, which we will go back to in a minute.
+I used these credentials to authenticate as root. Once you do, you will be presented with a "Login Successful" as well as an error message, which we will go back to in a minute.
 ![image](https://user-images.githubusercontent.com/74272629/235278474-6f4c76ef-6bf7-47e0-963d-3e00cb2c8529.png)
 
-You can verify that you are root
+You can verify that you are logged in as root.
 ![image](https://user-images.githubusercontent.com/74272629/235278599-789ebbae-370c-45ac-b1fb-b1aaf6ce93b7.png)
- By the way there is another easy why to access the root user by simply using the su command -- su root, as shown below.
+ By the way there is another easy way to access the root user by simply using the su command -- su root, as shown below.
  
 ![image](https://user-images.githubusercontent.com/74272629/235278638-c1f7f4f2-dff7-44c6-bf4e-a92d56c90acd.png)
 
