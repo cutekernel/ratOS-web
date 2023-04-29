@@ -53,7 +53,7 @@ Using the su command without providing a username:
 Using Burp Suite as a Web Proxy, I discovered that the command is passed in the HTTP Body as `command=`
 ![image](https://user-images.githubusercontent.com/74272629/235279071-59ddbfbe-7426-41f6-bb98-53c197dac8ba.png)
 
-I leverage that to fuzz this parameter and find a suitable XSS payload. I took into consideration the fact that the user's history command would record and display the payload. By skillfully executing arbitrary Javascript code, I was able to store the payload in the user's history. My only limitation was that this exploit only had a local impact on the user.
+I leverage that to fuzz this parameter and find a suitable XSS payload. I took into consideration the fact that the user's history command would record and display the payload. By executing arbitrary Javascript code, I was able to store the payload in the user's history. My only limitation was that this exploit only had a local impact on the user.
 
 ## Leveraging CSRF with RXSS
 
