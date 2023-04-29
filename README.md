@@ -5,7 +5,9 @@ More details coming soon.
 ratOS is a very secure unhackable Operating System [accessible](https://labs.hackxpert.com/CommandInjection/) from the internet. 
 Kudos to XSSRat for putting this application together.
 
-Understanding the Web Application and its funtionalities:
+## Understanding the Web Application and its funtionalities:
+
+This step is often overlooked because of its simplicity of many biaises and assumptions one may have about a particular application. However, I believe that it is fundamental in order to properly test the security of any system, application, etc.
 
 When you first access the website you are presented with a cli.
 ![image](https://user-images.githubusercontent.com/74272629/235278237-4a445c49-5bd7-4465-84cc-f57fb7d3e23e.png)
