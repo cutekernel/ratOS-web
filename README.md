@@ -66,8 +66,6 @@ I initiated an HTTP server with a straightforward HTTP form. Once the victim cli
 
 ![a19e2df2dfcf24a80a6fc52f775387b4](https://i.gyazo.com/e144d8b47f0481c60d741bc9ddc255f4.gif)
 
-## How does that relate to OWASP Top 10
-
 
 
 
