@@ -1,7 +1,5 @@
 # ratOS-web
 
-More details coming soon.
-
 ratOS is a very secure unhackable Operating System [accessible](https://labs.hackxpert.com/CommandInjection/) from the internet. 
 Kudos to XSSRat for putting this application together.
 
