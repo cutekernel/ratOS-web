@@ -52,12 +52,30 @@ Using the su command without providing a username:
 
 ## Digging up a tad more
 
+### XSS and the history command
 Using Burp Suite as a Web Proxy, I discovered that the command is passed in the HTTP Body as `command=`
 ![image](https://user-images.githubusercontent.com/74272629/235279071-59ddbfbe-7426-41f6-bb98-53c197dac8ba.png)
 
 I leverage that to fuzz this parameter and find a suitable XSS payload. I took into consideration the fact that the user's history command would record and display the payload. By executing arbitrary Javascript code, I was able to store the payload in the user's history. My only limitation was that this exploit only had a local impact on the user.
 
-## Leveraging CSRF with RXSS
+### XSS and the su command
+The error message you get is a symptom of poorly handled system errors.
+![image](https://user-images.githubusercontent.com/74272629/235278972-85ef5acd-2a90-4764-a9bd-224241595224.png)
+More importantly, the error message indicates that “offset [1]” is not found when the command su is run without a parameter.
+The command is processed by the php server as 
+Su = offset 0
+Username = offset 1
+Where the offset is an array.
+
+We can inject this command by providing the proper payload similarly to the XSS shown previously and deliver the exploit using CSRF.
+
+![image](https://user-images.githubusercontent.com/74272629/235482316-b3786824-686c-4cd1-b3af-e8deb9808140.png)
+![image](https://user-images.githubusercontent.com/74272629/235482349-0ae011e8-30b7-4ce2-b268-aa3baa67031c.png)
+
+
+
+
+## Leveraging CSRF with XSS
 
 Since the web application does not have an anti-csrf token, I leveraged this as an attack vector.
 ![image](https://user-images.githubusercontent.com/74272629/235279782-abed9273-dc04-4f23-af9f-973761830e98.png)
